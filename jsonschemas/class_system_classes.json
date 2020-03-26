@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "class_system_classes.json#",
+  "definitions": {
+    "link": {
+      "type": "object",
+      "required": [
+        "rel",
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "title": "Link reference",
+          "type": "string"
+        },
+        "rel": {
+          "title": "Link relation type",
+          "type": "string"
+        },
+        "title": {
+          "title": "Link title",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "title": "Classification System Classes List",
+  "type": "object",
+  "required": [
+    "links"
+  ],
+  "properties": {
+    "links": {
+      "title": "Links",
+      "type": "array",
+      "items": {
+            "$ref": "#/definitions/link"
+      }
+    }
+  }
+}

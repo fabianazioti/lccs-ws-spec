@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "classes.json#",
+  "definitions": {
+    "link": {
+      "type": "object",
+      "required": [
+        "rel",
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "title": "Link reference",
+          "type": "string"
+        },
+        "rel": {
+          "title": "Link relation type",
+          "type": "string"
+        },
+        "title": {
+          "title": "Link title",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "title": "Class Description",
+  "type": "object",
+  "required": [
+    "links",
+    "description",
+    "name",
+    "code",
+    "parent",
+    "id",
+    "classification_system"
+  ],
+  "properties": {
+    "links": {
+      "title": "Links",
+      "type": "array",
+      "items": {
+            "$ref": "#/definitions/link"
+      }
+    },
+     "id":{
+      "$id": "#/properties/id",
+      "type": "number",
+      "title": "The Class identificator",
+      "default": "",
+      "examples": [
+            1
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Class Name",
+      "default": "",
+      "examples": [
+        "Prodes"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "code": {
+      "$id": "#/properties/authority_name",
+      "type": "string",
+      "title": "The Class Code",
+      "default": "",
+      "examples": [
+        "bhd"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description of Classification System",
+      "default": "",
+      "pattern": "^(.*)$"
+    } ,
+    "version":{
+      "$id": "#/properties/version",
+      "type": "string",
+      "title": "The Classification System Version",
+      "default": "",
+      "examples": [
+            "1.0"
+      ]
+    }
+  }
+}
